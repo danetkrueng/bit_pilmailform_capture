@@ -1,0 +1,185 @@
+
+<!-- ###TMAIL_FORM### begin -->
+<form action="###FORM_URL###" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="MAX_FILE_SIZE" value="300000000" />
+	
+		<!-- ###HEADER_STD### begin -->
+		
+		<div class="line">
+			<h2>###_LL_LABEL_HEADER_STD###</h2>
+		</div>
+		<!-- ###HEADER_STD### end -->
+		<!-- ###HEADER_ERR### begin -->
+		<div class="line">
+			<h3>###_LL_LABEL_HEADER_ERR###</h3>
+		</div>
+		<!-- ###HEADER_ERR### end -->
+		
+		<div class="line">
+			<span class="form-label-long ###COMPANY_ERR###">###_LL_LABEL_COMPANY### ###COMPANY_ERR_TXT###</span>
+			<input type="text" name="tx_pilmailform_pi1[text][company]" value="###COMPANY_VAL###" />
+		</div>
+		<div class="line">
+			<span class="form-label-long ###NAME_ERR###">###_LL_LABEL_NAME###</span>
+			<input type="text" name="tx_pilmailform_pi1[text][name]" value="###NAME_VAL###" />
+			<span style="color: #fa6d1a;display: block;padding-bottom: 5px;">###NAME_ERR_TXT###</span>
+		</div>
+		
+		
+		<div class="line">
+			<span class="form-label-long ###EMAIL_ERR###">###_LL_LABEL_EMAIL### </span>
+			<input type="text" name="tx_pilmailform_pi1[text][email]" value="###EMAIL_VAL###" />
+			<span style="color: #fa6d1a;display: block;padding-bottom: 5px;">###EMAIL_ERR_TXT###</span>
+		</div>
+		
+		<div class="line">
+			<span class="form-label-long ###PHONE_ERR###">###_LL_LABEL_PHONE### </span>
+			<input type="text" name="tx_pilmailform_pi1[text][PHONE]" value="###PHONE_VAL###" />
+			<span style="color: #fa6d1a;display: block;padding-bottom: 5px;">###PHONE_ERR_TXT###</span>
+		</div>
+		<div class="line">
+			<span class="form-label-long ###MESSAGE_ERR###">###_LL_LABEL_MESSAGE### ###MESSAGE_ERR_TXT###</span>
+			<textarea name="tx_pilmailform_pi1[textarea][message]" cols="30" rows="7">###MESSAGE_VAL###</textarea>
+			
+		</div>
+		
+		<div class="line">
+			<span class="form-label-long ###USER_COPY_ERR###">###_LL_LABEL_USER_COPY###</span>
+			<input type="checkbox" name="tx_pilmailform_pi1[checkbox][user_copy]" value="yes" ###USER_COPY_YES_VAL### style="width: auto;"/>
+		</div>
+		
+		<!--###CAPTCHA_INSERT### this subpart is removed if CAPTCHA is not enabled! -->
+		<div class="line">
+	<div class="tx_pilmailform_pi1-captcha">
+		<label for="tx_pilmailform_pi1_captcha_response">###SR_FREECAP_NOTICE###</label>
+		###SR_FREECAP_CANT_READ###
+		<br />
+		<input type="text" size="15" id="tx_pilmailform_pi1_captcha_response" name="tx_pilmailform_pi1[captcha_response]" title="###SR_FREECAP_NOTICE###" value="" />
+		###SR_FREECAP_IMAGE###
+		###SR_FREECAP_ACCESSIBLE###
+	</div>
+	</div>
+<!--###CAPTCHA_INSERT###-->
+		
+		<div class="line">
+			<input type="submit" name="tx_pilmailform_pi1[submit]" value="###_LL_LABEL_SUBMIT###" />
+		</div>
+	
+</form>
+<!-- ###TMAIL_FORM### end -->
+
+
+
+
+<!-- ###TMAIL_MAIL### begin -->
+This message was sent using the TMailform extension
+
+Date:			###_DATE###
+Time:			###_TIME###
+Page:			###_PAGE### (id: ###_PID###)
+Site:			###_SITE###
+Path:			###_PATH###
+Client IP:		###_IP###
+
+# Firma:			###COMPANY_VAL###
+# Name:				###NAME_VAL###
+# Email address:	###EMAIL_VAL###
+
+# Message:
+
+###MESSAGE_VAL###
+<!-- ###TMAIL_MAIL### end -->
+
+<!-- ###TMAIL_MAIL_HTML### begin -->
+<h3>Kontaktanfrage von make-it-typo3</h3>
+<img src="fileadmin/template/pic/bit_logo.gif" alt="" width="180" height="75" border="0">
+Date:			###_DATE###<br>
+Time:			###_TIME###<br>
+Page:			###_PAGE### (id: ###_PID###)<br>
+Site:			###_SITE###<br>
+Path:			###_PATH###<br>
+Client IP:		###_IP###<br>
+
+<table cellspacing="1" cellpadding="4" style="background: #a8a8a8; font-family: Tahoma, arial; font-size: 12px; color: #4f4f4f;">
+	<tr>
+		<td style="background-color: #a8a8a8; color: #4f4f4f;vertical-align: top">Name</td>
+		<td style="background-color: #a8a8a8; color: #4f4f4f;vertical-align: top">###NAME_VAL###</td>
+	</tr>
+	<tr>
+		<td style="background-color: #a8a8a8; color: #4f4f4f;vertical-align: top">E-mail</td>
+		<td style="background-color: #a8a8a8; color: #4f4f4f;vertical-align: top">###EMAIL_VAL###</td>
+	</tr>
+	<tr>
+		<td style="background-color: #a8a8a8; color: #4f4f4f;vertical-align: top">Firma</td>
+		<td style="background-color: #a8a8a8; color: #4f4f4f;vertical-align: top">###COMPANY_VAL###</td>
+	</tr>
+	<tr>
+		<td style="background-color: #a8a8a8; color: #4f4f4f;vertical-align: top">Nachricht</td>
+		<td style="background-color: #a8a8a8; color: #4f4f4f;vertical-align: top">###MESSAGE_VAL###</td>
+	</tr>
+</table>
+<!-- ###TMAIL_MAIL_HTML### end -->
+
+
+
+
+
+<!-- ###TMAIL_MAIL_USERCOPY### begin -->
+Hallo ###NAME_VAL###,
+
+Folgende Daten wurden an uns gesendet:
+
+Firma:			###COMPANY_VAL###
+Name:			###NAME_VAL###
+Email address:		###EMAIL_VAL###
+
+
+Message:
+
+###MESSAGE_VAL###
+
+-- 
+Herzlichen Dank,
+make-it-typo3.de
+<!-- ###TMAIL_MAIL_USERCOPY### end -->
+
+<!-- ###TMAIL_MAIL_USERCOPY_HTML### begin -->
+
+<h3>Kontaktanfrage von make-it-typo3.de</h3>
+<p>Kopie Ihrer Nachricht an make-it-typo3.de</p>
+<img src="fileadmin/template/pic/bit_logo.gif" alt="" width="180" height="75" border="0">
+<table cellspacing="1" cellpadding="4" style="background: #a8a8a8; font-family: Tahoma, arial; font-size: 12px; color: #4f4f4f;">
+	<tr>
+		<td style="background-color: #a8a8a8; color: #4f4f4f;vertical-align: top">Name</td>
+		<td style="background-color: #a8a8a8; color: #4f4f4f;vertical-align: top">###NAME_VAL###</td>
+	</tr>
+	<tr>
+		<td style="background-color: #a8a8a8; color: #4f4f4f;vertical-align: top">E-mail</td>
+		<td style="background-color: #a8a8a8; color: #4f4f4f;vertical-align: top">###EMAIL_VAL###</td>
+	</tr>
+	<tr>
+		<td style="background-color: #a8a8a8; color: #4f4f4f;vertical-align: top">Firma</td>
+		<td style="background-color: #a8a8a8; color: #4f4f4f;vertical-align: top">###COMPANY_VAL###</td>
+	</tr>
+	<tr>
+		<td style="background-color: #a8a8a8; color: #4f4f4f;vertical-align: top">Nachricht</td>
+		<td style="background-color: #a8a8a8; color: #4f4f4f;vertical-align: top">###MESSAGE_VAL###</td>
+	</tr>
+</table>
+<!-- ###TMAIL_MAIL_USERCOPY_HTML### end -->
+
+
+
+
+
+<!-- ###TMAIL_THANKS### begin -->
+<h1>Vielen Dank</h1>
+<p class="bodytext">Wir werden und umgehend bei Ihnen melden!</p>
+<!-- ###TMAIL_THANKS### end -->
+
+
+
+<!-- ###TMAIL_ERROR### begin -->
+<h1>Entschuldigung</h1>
+Leider ist ein Fehler aufgetreten. Bitte versuchen Sie es später nocheinmal.
+<!-- ###TMAIL_ERROR### end -->
